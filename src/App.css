@@ -1,0 +1,97 @@
+/* Full container style */
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sunset canvas styling */
+#sunsetCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  cursor: pointer;
+}
+
+/* Content styles */
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.329);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s forwards 3s; /* Fades in after 3 seconds */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Becomes fully visible */
+  }
+}
+
+
+.poem-container {
+  margin-bottom: 20px;
+}
+
+.poem-text {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.cta-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #ff69b4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 10px; /* Add margin between the buttons */
+}
+
+.cta-button:hover{
+  background-color: #ff1493;
+}
+
+/* Heart styling */
+.heart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 200px;
+  color: #ff69b4;
+  text-align: center;
+  animation: heart-pulse 1s ease-in-out infinite;
+  z-index: 2; /* Ensure the heart is above all other elements */
+}
+
+/* Heart animation */
+@keyframes heart-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #ff1493;
+}
